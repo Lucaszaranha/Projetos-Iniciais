@@ -1,4 +1,4 @@
-package devandroid.lucas.applistavip;
+package devandroid.lucas.applistavip.view;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import devandroid.lucas.applistavip.R;
 
 public class MainActivity extends AppCompatActivity {
 
