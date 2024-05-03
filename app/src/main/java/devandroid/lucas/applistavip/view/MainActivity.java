@@ -2,6 +2,8 @@ package devandroid.lucas.applistavip.view;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,15 @@ public class MainActivity extends AppCompatActivity {
     String dadosPessoa;
     String dadosOutrapessoa;
 
+    EditText editPrimeiroNomeAluno;
+    EditText edit_SobrenomeAluno;
+    EditText editCursodesejadoAluno;
+    EditText editTelefoneDoAluno;
+
+    Button btnSalvar;
+    Button btnLimpar;
+    Button btnFinalizar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,22 +41,32 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa = new Pessoa();
 
         pessoa.setPrimeiroNome("Lucas");
-
         pessoa.setSobreNome("Aranha");
-
         pessoa.setCursoDesejado("Programação");
-
         pessoa.setTelefoneContato("999999999");
 
-
         outraPessoa.setPrimeiroNome("Lukaz");
-
         outraPessoa.setSobreNome("Braga");
-
         outraPessoa.setCursoDesejado("Java");
-
         outraPessoa.setTelefoneContato("999999955");
 
+        editPrimeiroNomeAluno = findViewById(R.id.editPrimeiroNomeAluno);
+        edit_SobrenomeAluno = findViewById(R.id.edit_SobrenomeAluno);
+        editCursodesejadoAluno = findViewById(R.id.editCursodesejadoAluno);
+        editTelefoneDoAluno = findViewById(R.id.editTelefoneDoAluno);
+
+        btnLimpar = findViewById(R.id.btnLimpar);
+        btnSalvar = findViewById(R.id.btnSalvar);
+        btnFinalizar = findViewById(R.id.btnFinalizar);
+
+        editPrimeiroNomeAluno.setText(pessoa.getPrimeiroNome());
+        edit_SobrenomeAluno.setText(pessoa.getSobreNome());
+        editCursodesejadoAluno.setText(pessoa.getCursoDesejado());
+        editTelefoneDoAluno.setText(pessoa.getTelefoneContato());
+
+
+
+/*
 
         dadosPessoa = "Primeiro nome: ";
 
