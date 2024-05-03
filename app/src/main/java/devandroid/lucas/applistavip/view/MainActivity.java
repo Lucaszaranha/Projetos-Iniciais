@@ -1,6 +1,7 @@
 package devandroid.lucas.applistavip.view;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         dadosPessoa += pessoa.getTelefoneContato();
 
+/*
 
         dadosOutrapessoa = "Primeiro nome: ";
 
@@ -78,10 +80,13 @@ public class MainActivity extends AppCompatActivity {
         dadosOutrapessoa += " Telefone de contato: ";
 
         dadosOutrapessoa += outraPessoa.getTelefoneContato();
+*/
 
 
+        // toString
 
-        int parada = 0;
+        Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
+        Log.i("POOAndroid","Objeto outraPessoa: "+ outraPessoa.toString());
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
