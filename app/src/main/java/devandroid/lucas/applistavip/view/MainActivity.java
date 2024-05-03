@@ -13,8 +13,11 @@ import devandroid.lucas.applistavip.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
-    Pessoa  pessoa;
+    Pessoa pessoa;
     Pessoa outraPessoa;
+
+    String dadosPessoa;
+    String dadosOutrapessoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +29,59 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa = new Pessoa();
 
         pessoa.setPrimeiroNome("Lucas");
+
         pessoa.setSobreNome("Aranha");
+
         pessoa.setCursoDesejado("Programação");
+
         pessoa.setTelefoneContato("999999999");
 
+
         outraPessoa.setPrimeiroNome("Lukaz");
+
         outraPessoa.setSobreNome("Braga");
+
         outraPessoa.setCursoDesejado("Java");
+
         outraPessoa.setTelefoneContato("999999955");
 
 
-        int parada;
-        parada = 0;
+        dadosPessoa = "Primeiro nome: ";
+
+        dadosPessoa += pessoa.getPrimeiroNome();
+
+        dadosPessoa += " Sobrenome: ";
+
+        dadosPessoa += pessoa.getSobreNome();
+
+        dadosPessoa += " Curso desejado: ";
+
+        dadosPessoa += pessoa.getCursoDesejado();
+
+        dadosPessoa += " Telefone de contato: ";
+
+        dadosPessoa += pessoa.getTelefoneContato();
+
+
+        dadosOutrapessoa = "Primeiro nome: ";
+
+        dadosOutrapessoa += outraPessoa.getPrimeiroNome();
+
+        dadosOutrapessoa += " Sobrenome: ";
+
+        dadosOutrapessoa += outraPessoa.getSobreNome();
+
+        dadosOutrapessoa += " Curso desejado: ";
+
+        dadosOutrapessoa += outraPessoa.getCursoDesejado();
+
+        dadosOutrapessoa += " Telefone de contato: ";
+
+        dadosOutrapessoa += outraPessoa.getTelefoneContato();
+
+
+
+        int parada = 0;
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
