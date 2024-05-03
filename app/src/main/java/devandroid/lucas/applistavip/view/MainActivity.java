@@ -14,6 +14,7 @@ import devandroid.lucas.applistavip.model.Pessoa;
 public class MainActivity extends AppCompatActivity {
 
     Pessoa  pessoa;
+    Pessoa outraPessoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,23 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        pessoa= new Pessoa();
+        pessoa = new Pessoa();
+        outraPessoa = new Pessoa();
+
+        pessoa.setPrimeiroNome("Lucas");
+        pessoa.setSobreNome("Aranha");
+        pessoa.setCursoDesejado("Programação");
+        pessoa.setTelefoneContato("999999999");
+
+        outraPessoa.setPrimeiroNome("Lukaz");
+        outraPessoa.setSobreNome("Braga");
+        outraPessoa.setCursoDesejado("Java");
+        outraPessoa.setTelefoneContato("999999955");
+
+
+        int parada;
+        parada = 0;
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
