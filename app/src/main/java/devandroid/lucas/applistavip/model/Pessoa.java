@@ -1,10 +1,10 @@
 package devandroid.lucas.applistavip.model;
 
 public class Pessoa {
-        private String primeiroNome;
-        private String sobreNome;
-        private String cursoDesejado;
-        private String telefoneContato;
+    private String primeiroNome;
+    private String sobreNome;
+    private String cursoDesejado;
+    private String telefoneContato;
 
     public String getPrimeiroNome() {
         return primeiroNome;
@@ -37,9 +37,6 @@ public class Pessoa {
     public void setTelefoneContato(String telefoneContato) {
         this.telefoneContato = telefoneContato;
     }
-
-    //To String - Para textos - Para strings de caracteres
-
 
     @Override
     public String toString() {

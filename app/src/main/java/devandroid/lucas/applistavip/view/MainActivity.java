@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
     Pessoa outraPessoa;
 
-    String dadosPessoa;
-    String dadosOutrapessoa;
-
     EditText editPrimeiroNomeAluno;
     EditText edit_SobrenomeAluno;
     EditText editCursodesejadoAluno;
@@ -41,11 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         pessoa = new Pessoa();
         outraPessoa = new Pessoa();
-
-        //pessoa.setPrimeiroNome("Lucas");
-        //pessoa.setSobreNome("Aranha");
-        //pessoa.setCursoDesejado("Programação");
-        //pessoa.setTelefoneContato("999999999");
 
         outraPessoa.setPrimeiroNome("Lukaz");
         outraPessoa.setSobreNome("Braga");
@@ -66,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         editCursodesejadoAluno.setText(pessoa.getCursoDesejado());
         editTelefoneDoAluno.setText(pessoa.getTelefoneContato());
 
-
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Volte sempre", Toast.LENGTH_LONG).show();
                 finish();
             }
-                                        });
+        });
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,57 +83,13 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setSobreNome(edit_SobrenomeAluno.getText().toString());
                 pessoa.setCursoDesejado(editCursodesejadoAluno.getText().toString());
                 pessoa.setTelefoneContato(editTelefoneDoAluno.getText().toString());
-                Toast.makeText(MainActivity.this, "Salvo com sucesso"+pessoa.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Salvo com sucesso" + pessoa.toString(), Toast.LENGTH_LONG).show();
 
             }
         });
 
-
-
-
-
-/*
-
-        dadosPessoa = "Primeiro nome: ";
-
-        dadosPessoa += pessoa.getPrimeiroNome();
-
-        dadosPessoa += " Sobrenome: ";
-
-        dadosPessoa += pessoa.getSobreNome();
-
-        dadosPessoa += " Curso desejado: ";
-
-        dadosPessoa += pessoa.getCursoDesejado();
-
-        dadosPessoa += " Telefone de contato: ";
-
-        dadosPessoa += pessoa.getTelefoneContato();
-
-/*
-
-        dadosOutrapessoa = "Primeiro nome: ";
-
-        dadosOutrapessoa += outraPessoa.getPrimeiroNome();
-
-        dadosOutrapessoa += " Sobrenome: ";
-
-        dadosOutrapessoa += outraPessoa.getSobreNome();
-
-        dadosOutrapessoa += " Curso desejado: ";
-
-        dadosOutrapessoa += outraPessoa.getCursoDesejado();
-
-        dadosOutrapessoa += " Telefone de contato: ";
-
-        dadosOutrapessoa += outraPessoa.getTelefoneContato();
-*/
-
-
-        // toString
-
-        Log.i("POOAndroid","Objeto pessoa: "+pessoa.toString());
-        Log.i("POOAndroid","Objeto outraPessoa: "+ outraPessoa.toString());
+        Log.i("POOAndroid", "Objeto pessoa: " + pessoa.toString());
+        Log.i("POOAndroid", "Objeto outraPessoa: " + outraPessoa.toString());
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
