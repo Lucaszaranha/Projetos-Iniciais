@@ -18,6 +18,8 @@ import devandroid.lucas.applistavip.controller.PessoaController;
 import devandroid.lucas.applistavip.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
+    PessoaController  pessoaController;
+
 
     Pessoa pessoa;
     Pessoa outraPessoa;
@@ -39,12 +41,11 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        pessoaController = new PessoaController();
+
         pessoa = new Pessoa();
 
-        controller = new PessoaController();
-        controller.toString();
 
-        outraPessoa = new Pessoa();
 
         outraPessoa.setPrimeiroNome("Lukaz");
         outraPessoa.setSobreNome("Braga");
