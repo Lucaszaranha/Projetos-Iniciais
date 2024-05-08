@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     Pessoa pessoa;
     Pessoa outraPessoa;
 
+    PessoaController controller;
+
     EditText editPrimeiroNomeAluno;
     EditText edit_SobrenomeAluno;
     EditText editCursodesejadoAluno;
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editCursodesejadoAluno.getText().toString());
                 pessoa.setTelefoneContato(editTelefoneDoAluno.getText().toString());
                 Toast.makeText(MainActivity.this, "Salvo com sucesso" + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+                controller.salvar(pessoa);
 
             }
         });
