@@ -14,12 +14,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import devandroid.lucas.applistavip.R;
+import devandroid.lucas.applistavip.controller.PessoaController;
 import devandroid.lucas.applistavip.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
     Pessoa pessoa;
     Pessoa outraPessoa;
+
+    PessoaController controller;
 
     EditText editPrimeiroNomeAluno;
     EditText edit_SobrenomeAluno;
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         pessoa = new Pessoa();
+
+        controller = new PessoaController();
+        controller.toString();
+
         outraPessoa = new Pessoa();
 
         outraPessoa.setPrimeiroNome("Lukaz");
