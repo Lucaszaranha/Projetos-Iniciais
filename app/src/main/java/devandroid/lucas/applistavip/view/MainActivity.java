@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setTelefoneContato(editTelefoneDoAluno.getText().toString());
                 Toast.makeText(MainActivity.this, "Salvo com sucesso" + pessoa.toString(), Toast.LENGTH_LONG).show();
 
+                controller.salvar(pessoa);
+
             }
         });
 
