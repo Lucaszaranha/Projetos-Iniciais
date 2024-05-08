@@ -1,11 +1,11 @@
 package devandroid.lucas.applistavip.controller;
 
 
+import devandroid.lucas.applistavip.model.Pessoa;
+
 public class PessoaController {
 
 
-    @NonNull
-    @Override
-    public String toString() {
-
+    public void salvar(Pessoa pessoa) {
+    }
 }

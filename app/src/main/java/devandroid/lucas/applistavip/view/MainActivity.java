@@ -18,11 +18,8 @@ import devandroid.lucas.applistavip.controller.PessoaController;
 import devandroid.lucas.applistavip.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
-    PessoaController  pessoaController;
-
 
     Pessoa pessoa;
-    Pessoa outraPessoa;
 
     PessoaController controller;
 
@@ -41,16 +38,10 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        pessoaController = new PessoaController();
+        controller = new PessoaController();
 
         pessoa = new Pessoa();
 
-
-
-        outraPessoa.setPrimeiroNome("Lukaz");
-        outraPessoa.setSobreNome("Braga");
-        outraPessoa.setCursoDesejado("Java");
-        outraPessoa.setTelefoneContato("999999955");
 
         editPrimeiroNomeAluno = findViewById(R.id.editPrimeiroNomeAluno);
         edit_SobrenomeAluno = findViewById(R.id.edit_SobrenomeAluno);
@@ -99,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("POOAndroid", "Objeto pessoa: " + pessoa.toString());
-        Log.i("POOAndroid", "Objeto outraPessoa: " + outraPessoa.toString());
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -109,3 +99,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+//
