@@ -18,6 +18,7 @@ import devandroid.lucas.applistavip.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
+
     Pessoa pessoa;
     Pessoa outraPessoa;
 
