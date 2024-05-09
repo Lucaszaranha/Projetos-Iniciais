@@ -46,23 +46,27 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor listaVip = preferences.edit();
 
         controller = new PessoaController();
+        controller.toString();
 
         pessoa = new Pessoa();
-
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome", ""));
+        pessoa.setSobreNome(preferences.getString("sobreNome", ""));
+        pessoa.setCursoDesejado(preferences.getString("cursoDesejado", ""));
+        pessoa.setTelefoneContato(preferences.getString("telefoneContato", ""));
 
         editPrimeiroNomeAluno = findViewById(R.id.editPrimeiroNomeAluno);
         edit_SobrenomeAluno = findViewById(R.id.edit_SobrenomeAluno);
         editCursodesejadoAluno = findViewById(R.id.editCursodesejadoAluno);
         editTelefoneDoAluno = findViewById(R.id.editTelefoneDoAluno);
 
-        btnLimpar = findViewById(R.id.btnLimpar);
-        btnSalvar = findViewById(R.id.btnSalvar);
-        btnFinalizar = findViewById(R.id.btnFinalizar);
-
         editPrimeiroNomeAluno.setText(pessoa.getPrimeiroNome());
         edit_SobrenomeAluno.setText(pessoa.getSobreNome());
         editCursodesejadoAluno.setText(pessoa.getCursoDesejado());
         editTelefoneDoAluno.setText(pessoa.getTelefoneContato());
+
+        btnLimpar = findViewById(R.id.btnLimpar);
+        btnSalvar = findViewById(R.id.btnSalvar);
+        btnFinalizar = findViewById(R.id.btnFinalizar);
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
