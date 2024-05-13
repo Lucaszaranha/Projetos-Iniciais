@@ -70,6 +70,28 @@
         app:layout_constraintStart_toStartOf="@+id/editCursodesejadoAluno"
         app:layout_constraintTop_toBottomOf="@+id/editCursodesejadoAluno" />
 
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione o curso desejado"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="637dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="379dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+        app:layout_constraintEnd_toEndOf="@+id/editTelefoneDoAluno"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTelefoneDoAluno"
+        app:layout_constraintTop_toBottomOf="@+id/editTelefoneDoAluno"
+        app:layout_constraintVertical_bias="0.11" />
+
     <Button
         android:id="@+id/btnSalvar"
         android:layout_width="wrap_content"
@@ -104,26 +126,5 @@
         app:layout_constraintStart_toStartOf="@+id/btnSalvar"
         app:layout_constraintTop_toBottomOf="@+id/editTelefoneDoAluno" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selecione o curso desejado"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="630dp" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTelefoneDoAluno"
-        app:layout_constraintVertical_bias="0.186" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
